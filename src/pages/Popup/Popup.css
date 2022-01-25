@@ -1,45 +1,62 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
 .App {
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
+  padding: 20px 5px;
+  height: 550px;
+  background-color: #707070;
+}
+
+.title {
   text-align: center;
-  height: 100%;
-  padding: 10px;
-  background-color: #282c34;
 }
 
-.App-logo {
-  height: 30vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  height: 100%;
+.buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+.buttons > button {
+  flex-grow: 1;
+
+  border-radius: 5px;
+  background-color: rgb(68, 93, 207);
   color: white;
+  padding: 10px 5px;
+  font-size: 1.2em;
 }
 
-.App-link {
-  color: #61dafb;
+.progress {
+  height: 5px;
+  border-radius: 2px;
+  background: rgb(255, 251, 38);
+  margin: 5px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.images-list {
+  height: 450px;
+  overflow-y: scroll;
+  overflow-x: auto;
+  background-color: aliceblue;
+  border: 1px solid #707070;
+}
+.images-list > div {
+  padding: 10px 0;
+}
+.images-list > div:nth-child(odd) {
+  background-color: #bbbbbb;
+}
+.images-list .index-of-image {
+  display: inline-block;
+  background-color: rgb(247, 247, 107);
+  min-width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  text-align: center;
 }
